@@ -25,7 +25,7 @@ toggler__input:checked + toggler__togglable {
 }
 ```
 
-<blockquote>
+<blockquote markdown="0">
 	<style>
 	.toggler__input {
 		display: none;
