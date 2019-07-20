@@ -3,6 +3,6 @@
 
 @import "{{ site.theme }}";
 
-.comparison {
-	display: grid;
+html {
+	tab-size: 4;
 }
