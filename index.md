@@ -32,7 +32,7 @@ const list = document.querySelectorAll('p.strange')  // return NodeList
 	const list = $('p.charming')
 	```
 	Note: the jQuery examples end up with a jQuery object not a raw element or NodeList so they are technically not equivalent. But it seemed silly to add `[0]` as that's not used if you actually work with jQuery.
-</details>
+</p></details>
 
 Some people like to alias these to `$('p.charming')` and `$$('p.strange')`, but it might be mistaken for jQuery.
 
@@ -59,7 +59,7 @@ const selectedChildren = element.querySelectorAll(':scope > p')
 	const children = $(element).children()
 	const selectedChildren = $(element).children('p')
 	```
-</details>
+</p></details>
 
 
 #### Parents, ancestors
@@ -77,7 +77,7 @@ const ancestor = element.closest('div.container')
 	const parent = $(element).parent()
 	const ancestor = $(element).closest('div.container')
 	```
-</details>
+</p></details>
 
 
 #### The old selecting
@@ -125,7 +125,7 @@ element.remove()
 
 	$(element).remove()
 	```
-</details>
+</p></details>
 
 <details>
 	<summary>Equivalent in old/supported JavaScript</summary><p>
@@ -138,7 +138,7 @@ element.remove()
 
 	element.parentNode.removeChild(element)
 	```
-</details>
+</p></details>
 
 
 ### Element manipulation
@@ -174,7 +174,7 @@ var hasClass = element.classList.contains('charming')
 
 	var hasClass = el.hasClass('charming')
 	```
-</details>
+</p></details>
 
 Note: the toggle with a boolean value is used:
 
