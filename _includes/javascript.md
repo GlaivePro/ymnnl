@@ -8,12 +8,12 @@ const list = document.querySelectorAll('p.strange')  // return NodeList
 ```
 
 <details markdown="1">
-	<summary>jQuery equivalent</summary>
-	```javascript
-	const element = $('p.charming').first()
-	const list = $('p.charming')
-	```
-	Note: the jQuery examples end up with a jQuery object not a raw element or NodeList so they are technically not equivalent. But it seemed silly to add `[0]` as that's not used if you actually work with jQuery.
+<summary>jQuery equivalent</summary>
+```javascript
+const element = $('p.charming').first()
+const list = $('p.charming')
+```
+Note: the jQuery examples end up with a jQuery object not a raw element or NodeList so they are technically not equivalent. But it seemed silly to add `[0]` as that's not used if you actually work with jQuery.
 </details>
 
 Some people like to alias these to `$('p.charming')` and `$$('p.strange')`, but it might be mistaken for jQuery.
@@ -33,15 +33,15 @@ const children = element.children
 const selectedChildren = element.querySelectorAll(':scope > p')
 ```
 
-<details>
-	<summary>jQuery equivalent</summary><p>
-	```javascript
-	const childElement = $(element).find('p.charming').first()
-	const list = $(element).find('p.strange')
-	const children = $(element).children()
-	const selectedChildren = $(element).children('p')
-	```
-</p></details>
+<details markdown="1">
+<summary>jQuery equivalent</summary>
+```javascript
+const childElement = $(element).find('p.charming').first()
+const list = $(element).find('p.strange')
+const children = $(element).children()
+const selectedChildren = $(element).children('p')
+```
+</details>
 
 
 #### Parents, ancestors
@@ -53,13 +53,13 @@ const parent = element.parentNode // there is also .parentElement if you want to
 const ancestor = element.closest('div.container')
 ```
 
-<details>
-	<summary>jQuery equivalent</summary><p>
-	```javascript
-	const parent = $(element).parent()
-	const ancestor = $(element).closest('div.container')
-	```
-</p></details>
+<details markdown="1">
+<summary>jQuery equivalent</summary>
+```javascript
+const parent = $(element).parent()
+const ancestor = $(element).closest('div.container')
+```
+</details>
 
 
 #### The old selecting
@@ -94,33 +94,33 @@ sibling.before(anotherSibling)
 element.remove()
 ```
 
-<details>
-	<summary>jQuery equivalent</summary><p>
-	```javascript
-	$(parent).append(child) // or $(child).appendTo(parent)
-	$(parent).append(childA, childB, 'just a text string', childC)
-	$(parent).prepend(childX, childY) // $([childX,childY]).prependTo(parent)
+<details markdown="1">
+<summary>jQuery equivalent</summary>
+```javascript
+$(parent).append(child) // or $(child).appendTo(parent)
+$(parent).append(childA, childB, 'just a text string', childC)
+$(parent).prepend(childX, childY) // $([childX,childY]).prependTo(parent)
 
-	$(sibling).after(anotherSibling) // or $(anotherSibling).insertAfter(sibling)
-	$(sibling).after(aSx, aSy) // or $([aSx, aSy]).insertBefore(sibling)
-	$(sibling).before(anotherSibling) // or $(anotherSibling).insertBefore(sibling)
+$(sibling).after(anotherSibling) // or $(anotherSibling).insertAfter(sibling)
+$(sibling).after(aSx, aSy) // or $([aSx, aSy]).insertBefore(sibling)
+$(sibling).before(anotherSibling) // or $(anotherSibling).insertBefore(sibling)
 
-	$(element).remove()
-	```
-</p></details>
+$(element).remove()
+```
+</details>
 
-<details>
-	<summary>Equivalent in old/supported JavaScript</summary><p>
-	```javascript
-	parent.appendChild(child) // can't insert many at once
-	parent.insertBefore(child, null)  // yup, this is how you prepended
+<details markdown="1">
+<summary>Equivalent in old/supported JavaScript</summary>
+```javascript
+parent.appendChild(child) // can't insert many at once
+parent.insertBefore(child, null)  // yup, this is how you prepended
 
-	parent.insertAfter(newSibling, sibling)
-	parent.insertBefore(newSibling, sibling)
+parent.insertAfter(newSibling, sibling)
+parent.insertBefore(newSibling, sibling)
 
-	element.parentNode.removeChild(element)
-	```
-</p></details>
+element.parentNode.removeChild(element)
+```
+</details>
 
 
 ### Element manipulation
@@ -141,22 +141,22 @@ cl.replace('strange', 'strangest')
 var hasClass = element.classList.contains('charming')
 ```
 
-<details>
-	<summary>jQuery equivalent</summary><p>
-	```javascript
-	$(element).addClass('strange') // or $(element).toggleClass('strange', true)
-	$(element).addClass('stranger charming')
+<details markdown="1">
+<summary>jQuery equivalent</summary>
+```javascript
+$(element).addClass('strange') // or $(element).toggleClass('strange', true)
+$(element).addClass('stranger charming')
 
-	// when you're tired of spelling $(element)
-	const el = $(element)
+// when you're tired of spelling $(element)
+const el = $(element)
 
-	el.removeClass('stranger')  // or el.toggleClass('stranger', false)
-	el.toggleClass('charming')
-	el.switchClass('strange', 'strangest')
+el.removeClass('stranger')  // or el.toggleClass('stranger', false)
+el.toggleClass('charming')
+el.switchClass('strange', 'strangest')
 
-	var hasClass = el.hasClass('charming')
-	```
-</p></details>
+var hasClass = el.hasClass('charming')
+```
+</details>
 
 Note: the toggle with a boolean value is used:
 
