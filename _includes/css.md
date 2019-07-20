@@ -25,27 +25,25 @@ toggler__input:checked + toggler__togglable {
 }
 ```
 
-<blockquote markdown="0">
 <style>
-.toggler__input {
-display: none;
-}
+	.toggler__input {
+		display: none;
+	}
 
-toggler__togglable {
-display: none;
-}
+	toggler__togglable {
+		display: none;
+	}
 
-toggler__input:checked + toggler__togglable {
-display: block; /* the style that you want to turn on/off */
-}
+	toggler__input:checked + toggler__togglable {
+		display: block; /* the style that you want to turn on/off */
+	}
 </style>
 
 <label for="toggler1" class="toggler__label">Toggle here</label>
 <input type=checkbox class="toggler__input" id="toggler1" checked>
 <div class="toggler__togglable">
-Hidable content
+	Hidable content
 </div>
-</blockquote>
 
 Of course, it's better to use [details](#details-is-the-spoiler-thing) if you just want to show and hide a block of content right after your label.
 
@@ -93,40 +91,38 @@ gallery__image:target {
 }
 ```
 
-<blockquote markdown="0">
 <style>
-gallery__image {
-width: 100px;
-height: 100px;
-object-fit: cover;
-}
+	gallery__image {
+		width: 100px;
+		height: 100px;
+		object-fit: cover;
+	}
 
-gallery__image:target {
-width: 500px;
-height: auto;
-object-fit: none;
-}
+	gallery__image:target {
+		width: 500px;
+		height: auto;
+		object-fit: none;
+	}
 </style>
 
 <a href="#image1">
-<img 
-class="gallery__image"
-name="image1" 
-src="http://placecorgi.com/500" >
+	<img 
+		class="gallery__image"
+		name="image1" 
+		src="http://placecorgi.com/500" >
 </a>
 <a href="#image2">
-<img 
-class="gallery__image"
-name=image2 
-src="http://placecorgi.com/500" >
+	<img 
+		class="gallery__image"
+		name=image2 
+		src="http://placecorgi.com/500" >
 </a>
 <a href="#image3">
-<img
-class="gallery__image" 
-id='image3' 
-src="http://placecorgi.com/500" >
+	<img
+		class="gallery__image" 
+		id='image3' 
+		src="http://placecorgi.com/500" >
 </a>
-</blockquote>
 
 You can create both [lightboxes](https://codepen.io/gschier/pen/HCoqh) and [galleries](http://thewebrocks.com/demos/targetgallery/) like that. By the way that final example is from the February of 2012.
 
@@ -154,24 +150,23 @@ validation__invalid:valid {
 }
 ```
 
-<blockquote markdown="0">
 <style>
-validation__range:out-of-range:after {
-	content: 'The value should be between ' attr(min) ' and ' attr(max);
-}
+	validation__range:out-of-range:after {
+		content: 'The value should be between ' attr(min) ' and ' attr(max);
+	}
 
-input:required {
-	border: orange;
-}
+	input:required {
+		border: orange;
+	}
 
-validation__invalid:valid {
-	border-bottom: green;
-}
+	validation__invalid:valid {
+		border-bottom: green;
+	}
 </style>
 
 <input class=validation__range type=number min=1 max=3 value=7>
 <input class=validation__invalid type=email required>
-</blockquote>
+
 
 ### And other possibilities
 
