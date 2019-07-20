@@ -2,3 +2,7 @@
 ---
 
 @import "{{ site.theme }}";
+
+.comparison {
+	display: grid;
+}
