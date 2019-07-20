@@ -269,7 +269,9 @@ toggler__input:not(:checked) + toggler__togglable {
 <div class="toggler__togglable">
 	Hidable content
 </div>
-
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+	const new = window.getComputedStyle()
+</code></pre></div></div>
 
 ## You only need HTML for some things
 
