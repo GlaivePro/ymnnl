@@ -16,11 +16,11 @@ Here are the styles:
 	display: none;
 }
 
-toggler__togglable {
+.toggler__togglable {
 	display: none;
 }
 
-toggler__input:checked + toggler__togglable {
+.toggler__input:checked + toggler__togglable {
 	display: block;
 }
 ```
@@ -30,11 +30,11 @@ toggler__input:checked + toggler__togglable {
 		display: none;
 	}
 
-	toggler__togglable {
+	.toggler__togglable {
 		display: none;
 	}
 
-	toggler__input:checked + toggler__togglable {
+	.toggler__input:checked + toggler__togglable {
 		display: block; /* the style that you want to turn on/off */
 	}
 </style>
@@ -78,13 +78,13 @@ While you don't want the address bar and browser's history littered on any chang
 ```
 
 ```css
-gallery__image {
+.gallery__image {
 	width: 100px;
 	height: 100px;
 	object-fit: cover;
 }
 
-gallery__image:target {
+.gallery__image:target {
 	width: 300px;
 	height: auto;
 	object-fit: none;
@@ -92,13 +92,13 @@ gallery__image:target {
 ```
 
 <style>
-	gallery__image {
+	.gallery__image {
 		width: 100px;
 		height: 100px;
 		object-fit: cover;
 	}
 
-	gallery__image:target {
+	.gallery__image:target {
 		width: 300px;
 		height: auto;
 		object-fit: none;
@@ -137,7 +137,7 @@ If you use HTML validation, you can also style your inputs using `:valid`, `:inv
 ```
 
 ```css
-validation__range:out-of-range:after {
+.validation__range:out-of-range:after {
 	content: 'The value should be between ' attr(min) ' and ' attr(max);
 }
 
@@ -145,13 +145,13 @@ input:required {
 	border: orange;
 }
 
-validation__invalid:valid {
+.validation__invalid:valid {
 	border-bottom: green;
 }
 ```
 
 <style>
-	validation__range:out-of-range:after {
+	.validation__range:out-of-range:after {
 		content: 'The value should be between ' attr(min) ' and ' attr(max);
 	}
 
@@ -159,13 +159,13 @@ validation__invalid:valid {
 		border: orange;
 	}
 
-	validation__invalid:valid {
+	.validation__invalid:valid {
 		border-bottom: green;
 	}
 </style>
 
-<input class=validation__range type=number min=1 max=3 value=7>
-<input class=validation__invalid type=email required>
+<input markdown="0" class=validation__range type=number min=1 max=3 value=7>
+<input markdown="0" class=validation__invalid type=email required>
 
 
 ### And other possibilities
