@@ -1,5 +1,4 @@
 ---
-title: You Might Not Need a Library
 ---
 
 <style>
