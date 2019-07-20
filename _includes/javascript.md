@@ -138,7 +138,7 @@ cl.remove('stranger')  // or cl.toggle('stranger', false)
 cl.toggle('charming')
 cl.replace('strange', 'strangest')
 
-var hasClass = element.classList.contains('charming')
+const hasClass = element.classList.contains('charming')
 ```
 
 <details markdown="1">
@@ -154,7 +154,7 @@ el.removeClass('stranger')  // or el.toggleClass('stranger', false)
 el.toggleClass('charming')
 el.switchClass('strange', 'strangest')
 
-var hasClass = el.hasClass('charming')
+const hasClass = el.hasClass('charming')
 ```
 </details>
 

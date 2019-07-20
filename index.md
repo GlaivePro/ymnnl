@@ -4,6 +4,8 @@
 # You Might Not Need a Library
 {% include introduction.md %}
 
+* TOC {:toc}
+
 ## Raw JavaScript can do it
 {% include javascript.md %}
 
