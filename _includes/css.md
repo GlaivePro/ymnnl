@@ -5,7 +5,7 @@ You can hide depending on value of checkbox. You can toggle the checkbox with a 
 <label for="toggler1" class="toggler__label">Toggle here</label>
 <input type="checkbox" class="toggler__input" id="toggler1" checked>
 <div class="toggler__togglable">
-	Hidable content
+	Togglable size
 </div>
 ```
 
@@ -51,7 +51,7 @@ Here are the styles:
 <label for="toggler1" class="toggler__label">Toggle here</label>
 <input type="checkbox" class="toggler__input" id="toggler1" checked>
 <div class="toggler__togglable">
-	Hidable content
+	Togglable size
 </div>
 </blockquote>
 
