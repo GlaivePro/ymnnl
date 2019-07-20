@@ -12,30 +12,38 @@ You can hide depending on value of checkbox. You can toggle the checkbox with a 
 Here are the styles:
 
 ```css
+.toggler__label {
+	cursor: pointer;
+}
+
 .toggler__input {
 	display: none;
 }
 
 .toggler__togglable {
-	display: none;
+	font-size: 1.5rem;
 }
 
-.toggler__input:checked + toggler__togglable {
-	display: block;
+.toggler__input:checked + .toggler__togglable {
+	font-size: 2rem;
 }
 ```
 
 <style>
+	.toggler__label {
+		cursor: pointer;
+	}
+
 	.toggler__input {
 		display: none;
 	}
 
 	.toggler__togglable {
-		display: none;
+		font-size: 1.5rem;
 	}
 
-	.toggler__input:checked + toggler__togglable {
-		display: block; /* the style that you want to turn on/off */
+	.toggler__input:checked + .toggler__togglable {
+		font-size: 2rem;
 	}
 </style>
 
@@ -47,7 +55,7 @@ Here are the styles:
 </div>
 </blockquote>
 
-Of course, it's better to use [details](#details-is-the-spoiler-thing) if you just want to show and hide a block of content right after your label.
+If you just want to show and hide a block of content right after your label you can use [details](#details-is-the-spoiler-thing).
 
 
 ### Use the :target selector
