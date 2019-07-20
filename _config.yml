@@ -1,3 +1,8 @@
+kramdown:
+  input: GFM
+  hard_wrap: false
+
 title: "You Might Not Need a Library"
 description: "Collection of raw HTML, CSS and JS frontend snippets"
 google_analytics: UA-75732321-11
+

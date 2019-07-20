@@ -1,6 +1,3 @@
----
----
-
 ### Selecting elements
 
 The [Selectors API](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) let's you select the elements just like in CSS and jQuery.
@@ -10,14 +7,14 @@ const element = document.querySelector('p.charming')  // returns first match
 const list = document.querySelectorAll('p.strange')  // return NodeList
 ```
 
-<details>
-	<summary>jQuery equivalent</summary><p>
+<details markdown="1">
+	<summary>jQuery equivalent</summary>
 	```javascript
 	const element = $('p.charming').first()
 	const list = $('p.charming')
 	```
 	Note: the jQuery examples end up with a jQuery object not a raw element or NodeList so they are technically not equivalent. But it seemed silly to add `[0]` as that's not used if you actually work with jQuery.
-</p></details>
+</details>
 
 Some people like to alias these to `$('p.charming')` and `$$('p.strange')`, but it might be mistaken for jQuery.
 
