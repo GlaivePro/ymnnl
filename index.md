@@ -111,6 +111,9 @@ sibling.before(anotherSibling)
 // remove
 element.remove()
 
+// empty
+element.innerHTML = ''
+
 // copy
 const dupe = element.cloneNode(true)  // true -> copy subtree, false -> just the element without any content
 ```
@@ -128,6 +131,8 @@ const dupe = element.cloneNode(true)  // true -> copy subtree, false -> just the
 
 	$(element).remove()
 
+	$(element).empty()
+
 	const dupe = $(element).clone(false)  // true -> copy jquery data and events as well
 	```
 </details>
@@ -135,20 +140,80 @@ const dupe = element.cloneNode(true)  // true -> copy subtree, false -> just the
 <details>
 	<summary>Equivalent in old/supported JavaScript</summary>
 	```javascript
-	// insert
 	parent.appendChild(child) // can't insert many at once
 	parent.insertBefore(child, null)  // yup, this is how you prepended
 
 	parent.insertAfter(newSibling, sibling)
 	parent.insertBefore(newSibling, sibling)
 
-	// remove
 	element.parentNode.removeChild(element)
 
-	// clone
+	element.innerHTML = ''
+
 	const dupe = element.cloneNode(true)
 	```
 </details>
+
+### These still work as well
+
+```javascript
+element.innerHTML = ''  //empty it
+```
+
+## Element manipulation
+
+### Classes
+
+```javascript
+element.classList.add('strange')  // or element.classList.toggle('strange', true)
+element.classList.add('stranger', 'charming')
+
+// when you're tired of spelling element.classList
+const cl = element.classList
+
+cl.remove('stranger')  // or cl.toggle('stranger', false)
+cl.toggle('charming')
+cl.replace('strange', 'strangest')
+
+var hasClass = element.classList.contains('charming')
+```
+
+<details>
+	<summary>jQuery equivalent</summary>
+	```javascript
+	$(element).addClass('strange') // or $(element).toggleClass('strange', true)
+	$(element).addClass('stranger charming')
+
+	// when you're tired of spelling $(element)
+	const el = $(element)
+
+	el.removeClass('stranger')  // or el.toggleClass('stranger', false)
+	el.toggleClass('charming')
+	el.switchClass('strange', 'strangest')
+
+	var hasClass = el.hasClass('charming')
+	```
+</details>
+
+Note: the toggle with a boolean value is used to simplify this:
+
+```javascript
+if (condition)
+	element.classList.add('strange')
+else
+	element.classList.remove('strange')
+
+// into 
+element.classList.toggle('strange', condition)
+```
+
+### Data
+
+```javascript
+element.dataset.myProperty = '123'  // set data-my-property="123" on the element
+```
+
+
 
 ## AJAX
 
