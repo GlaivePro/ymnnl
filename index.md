@@ -4,8 +4,11 @@
 # You Might Not Need a Library
 {% include introduction.md %}
 
+<details markdown="1">
+<summary>Table of Contents</summary>
 * TOC
 {:toc}
+</details>
 
 ## Raw JavaScript can do it
 {% include javascript.md %}

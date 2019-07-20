@@ -56,25 +56,21 @@ While you don't want the address bar and browser's history littered on any chang
 <a href="#image1">
 	<img 
 		class="gallery__image"
-		name="image1" 
+		id="image1" 
 		src="http://placecorgi.com/300" >
 </a>
 <a href="#image2">
 	<img 
 		class="gallery__image"
-		name=image2 
+		id="image2" 
 		src="http://placecorgi.com/300" >
 </a>
 <a href="#image3">
 	<img
 		class="gallery__image" 
-		id='image3' 
+		id="image3"
 		src="http://placecorgi.com/300" >
 </a>
-<!-- not to promote inconsistency but to remind you: -->
-<!-- target can be specified by name or id -->
-<!-- attribute can be in single or double quotes -->
-<!-- or without any if there are no spaces -->
 ```
 
 ```css
@@ -96,31 +92,31 @@ While you don't want the address bar and browser's history littered on any chang
 		width: 100px;
 		height: 100px;
 		object-fit: cover;
+		filter: hue-rotate(33deg);
 	}
 
 	.gallery__image:target {
-		width: 300px;
 		height: auto;
-		object-fit: none;
+		filter: none;
 	}
 </style>
 
 <a href="#image1">
 	<img 
 		class="gallery__image"
-		name="image1" 
+		id="image1" 
 		src="http://placecorgi.com/300" >
 </a>
 <a href="#image2">
 	<img 
 		class="gallery__image"
-		name=image2 
+		id="image2"
 		src="http://placecorgi.com/300" >
 </a>
 <a href="#image3">
 	<img
 		class="gallery__image" 
-		id='image3' 
+		id="image3" 
 		src="http://placecorgi.com/300" >
 </a>
 

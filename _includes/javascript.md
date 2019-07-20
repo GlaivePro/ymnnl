@@ -28,7 +28,7 @@ The same API works for selecting inside an element.
 const descendantElement = element.querySelector('p.charming')
 const list = element.querySelectorAll('p.strange')
 
-const children = element.children
+const children = element.children // not new, included for completeness like .parentNode later on
 // to select among direct descendants use :scope pseudo-class that refers to element
 const selectedChildren = element.querySelectorAll(':scope > p')
 ```
@@ -81,7 +81,7 @@ element.getElementByName('attachments[]')
 ### DOM manipulation
 
 ```javascript
-// move or insert (if it's a new node)
+// move (or insert if it's a new node)
 parent.append(child)
 parent.append(childA, childB, 'just a text string', childC)
 parent.prepend(childX, childY)
