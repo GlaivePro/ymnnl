@@ -57,19 +57,19 @@ While you don't want the address bar and browser's history littered on any chang
 	<img 
 		class="gallery__image"
 		name="image1" 
-		src="http://placecorgi.com/500" >
+		src="http://placecorgi.com/300" >
 </a>
 <a href="#image2">
 	<img 
 		class="gallery__image"
 		name=image2 
-		src="http://placecorgi.com/500" >
+		src="http://placecorgi.com/300" >
 </a>
 <a href="#image3">
 	<img
 		class="gallery__image" 
 		id='image3' 
-		src="http://placecorgi.com/500" >
+		src="http://placecorgi.com/300" >
 </a>
 <!-- not to promote inconsistency but to remind you: -->
 <!-- target can be specified by name or id -->
@@ -85,7 +85,7 @@ gallery__image {
 }
 
 gallery__image:target {
-	width: 500px;
+	width: 300px;
 	height: auto;
 	object-fit: none;
 }
@@ -99,7 +99,7 @@ gallery__image:target {
 	}
 
 	gallery__image:target {
-		width: 500px;
+		width: 300px;
 		height: auto;
 		object-fit: none;
 	}
@@ -109,19 +109,19 @@ gallery__image:target {
 	<img 
 		class="gallery__image"
 		name="image1" 
-		src="http://placecorgi.com/500" >
+		src="http://placecorgi.com/300" >
 </a>
 <a href="#image2">
 	<img 
 		class="gallery__image"
 		name=image2 
-		src="http://placecorgi.com/500" >
+		src="http://placecorgi.com/300" >
 </a>
 <a href="#image3">
 	<img
 		class="gallery__image" 
 		id='image3' 
-		src="http://placecorgi.com/500" >
+		src="http://placecorgi.com/300" >
 </a>
 
 You can create both [lightboxes](https://codepen.io/gschier/pen/HCoqh) and [galleries](http://thewebrocks.com/demos/targetgallery/) like that. By the way that final example is from the February of 2012.
