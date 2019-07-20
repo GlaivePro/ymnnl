@@ -40,8 +40,7 @@ Here are the styles:
 </style>
 
 <label for="toggler1" class="toggler__label">Toggle here</label>
-<input type="checkbox" class="toggler__input" id="toggler1" checked>
-<div class="toggler__togglable">
+<input type="checkbox" class="toggler__input" id="toggler1" checked><div class="toggler__togglable">
 	Hidable content
 </div>
 
@@ -129,39 +128,51 @@ If you use HTML validation, you can also style your inputs using `:valid`, `:inv
 
 ```html
 <input class="validation__range" type="number" min="1" max="3" value="7">
-<input class="validation__invalid" type="email" required>
+<span class="validation__error">The number should be between 1 and 3.</span>
+
+<input class="validation__invalid" type="email" placeholder="enter an email" required>
 ```
 
 ```css
-.validation__range:out-of-range:after {
-	content: 'The value should be between ' attr(min) ' and ' attr(max);
+.validation__error {
+	display: none;
+}
+
+.validation__range:out-of-range + .validation__error {
+	display: inline;
 }
 
 input:required {
-	border: orange;
+	border: 1px orange solid;
 }
 
 .validation__invalid:valid {
-	border-bottom: green;
+	border-bottom: 3px green solid;
 }
 ```
 
 <style>
-	.validation__range:out-of-range:after {
-		content: 'The value should be between ' attr(min) ' and ' attr(max);
+	.validation__error {
+		display: none;
+	}
+
+	.validation__range:out-of-range + .validation__error {
+		display: inline;
 	}
 
 	input:required {
-		border: orange;
+		border: 1px orange solid;
 	}
 
 	.validation__invalid:valid {
-		border-bottom: green;
+		border-bottom: 3px green solid;
 	}
 </style>
 
 <input class="validation__range" type="number" min="1" max="3" value="7">
-<input class="validation__invalid" type="email" required>
+<span class="validation__error">The number should be between 1 and 3.</span>
+
+<input class="validation__invalid" type="email" placeholder="enter an email" required>
 
 
 ### And other possibilities
