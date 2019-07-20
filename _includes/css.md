@@ -3,7 +3,7 @@
 You can hide depending on value of checkbox. You can toggle the checkbox with a label
 ```html
 <label for="toggler1" class="toggler__label">Toggle here</label>
-<input type=checkbox class="toggler__input" id="toggler1" checked>
+<input type="checkbox" class="toggler__input" id="toggler1" checked>
 <div class="toggler__togglable">
 	Hidable content
 </div>
@@ -40,7 +40,7 @@ Here are the styles:
 </style>
 
 <label for="toggler1" class="toggler__label">Toggle here</label>
-<input type=checkbox class="toggler__input" id="toggler1" checked>
+<input type="checkbox" class="toggler__input" id="toggler1" checked>
 <div class="toggler__togglable">
 	Hidable content
 </div>
@@ -57,19 +57,19 @@ While you don't want the address bar and browser's history littered on any chang
 	<img 
 		class="gallery__image"
 		id="image1" 
-		src="http://placecorgi.com/300" >
+		src="http://placecorgi.com/100/300?a" >
 </a>
 <a href="#image2">
 	<img 
 		class="gallery__image"
 		id="image2" 
-		src="http://placecorgi.com/300" >
+		src="http://placecorgi.com/100/300?b" >
 </a>
 <a href="#image3">
 	<img
 		class="gallery__image" 
 		id="image3"
-		src="http://placecorgi.com/300" >
+		src="http://placecorgi.com/100/300?c" >
 </a>
 ```
 
@@ -105,19 +105,19 @@ While you don't want the address bar and browser's history littered on any chang
 	<img 
 		class="gallery__image"
 		id="image1" 
-		src="http://placecorgi.com/300" >
+		src="http://placecorgi.com/100/300?a" >
 </a>
 <a href="#image2">
 	<img 
 		class="gallery__image"
 		id="image2"
-		src="http://placecorgi.com/300" >
+		src="http://placecorgi.com/100/300?b" >
 </a>
 <a href="#image3">
 	<img
 		class="gallery__image" 
 		id="image3" 
-		src="http://placecorgi.com/300" >
+		src="http://placecorgi.com/100/300?c" >
 </a>
 
 You can create both [lightboxes](https://codepen.io/gschier/pen/HCoqh) and [galleries](http://thewebrocks.com/demos/targetgallery/) like that. By the way that final example is from the February of 2012.
@@ -128,8 +128,8 @@ You can create both [lightboxes](https://codepen.io/gschier/pen/HCoqh) and [gall
 If you use HTML validation, you can also style your inputs using `:valid`, `:invalid` and other pseudo-classes.
 
 ```html
-<input class=validation__range type=number min=1 max=3 value=7>
-<input class=validation__invalid type=email required>
+<input class="validation__range" type="number" min="1" max="3" value="7">
+<input class="validation__invalid" type="email" required>
 ```
 
 ```css
@@ -160,8 +160,8 @@ input:required {
 	}
 </style>
 
-<input markdown="0" class=validation__range type=number min=1 max=3 value=7>
-<input markdown="0" class=validation__invalid type=email required>
+<input class="validation__range" type="number" min="1" max="3" value="7">
+<input class="validation__invalid" type="email" required>
 
 
 ### And other possibilities
