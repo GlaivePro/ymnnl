@@ -39,10 +39,13 @@ Here are the styles:
 	}
 </style>
 
+<blockquote markdown="0">
 <label for="toggler1" class="toggler__label">Toggle here</label>
-<input type="checkbox" class="toggler__input" id="toggler1" checked><div class="toggler__togglable">
+<input type="checkbox" class="toggler__input" id="toggler1" checked>
+<div class="toggler__togglable">
 	Hidable content
 </div>
+</blockquote>
 
 Of course, it's better to use [details](#details-is-the-spoiler-thing) if you just want to show and hide a block of content right after your label.
 
