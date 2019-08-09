@@ -186,6 +186,20 @@ input:required {
 <input class="validation__invalid" type="email" placeholder="enter an email" required>
 
 
+### Display your head and the elements within
+
+Many people are not aware that the elements like head, style, script and others are invisible just because the default stylesheet on their browser says so. You can view all of it inside the viewport if you want to.
+
+Here's an example styling to display style, link and script elements and their sources.
+
+```css
+head, script, style, link {	display: block }
+script, style {	white-space: pre }
+link::before { content: attr(href) }
+style::before { content: attr(src) }
+```
+
+
 ### And other possibilities
 
 There is a million things that can be done with just CSS. Including games like [this](https://codepen.io/elad2412/pen/hBaqo) and [this](https://codepen.io/jcoulterdesign/pen/NOMeEb) or even [without any HTML](https://codepen.io/SelenIT/pen/oXzMbR).
