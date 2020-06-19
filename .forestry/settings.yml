@@ -3,7 +3,16 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections: 
+sections:
+- type: document
+  path: index.md
+  label: index
+  match: "**/*"
+- type: directory
+  path: _includes
+  label: includes
+  create: all
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
